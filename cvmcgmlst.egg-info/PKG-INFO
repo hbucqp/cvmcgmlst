@@ -1,3 +1,24 @@
+Metadata-Version: 2.1
+Name: cvmcgmlst
+Version: 0.1.1
+Summary: cgMLST analysis tool
+Home-page: https://github.com/hbucqp/cvmcgmlst
+Author: Qingpo Cui
+Author-email: cqp@cau.edu.cn
+License: MIT Licence
+Keywords: wgs,cgmlst
+Platform: any
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+
 # cvmmlst
 
 
@@ -101,6 +122,8 @@ cvmcgmlst -f /PATH_TO_ASSEBLED_GENOME/sample.fa -create_db -db /PATH_TO_DATABASE
 # Batch Mode
 cvmcgmlst -i /PATH_TO_ASSEBLED_GENOME_DIR -create_db -db /PATH_TO_DATABASE/reference.fa -o PATH_TO_OUTPUT
 ```
+
+
 
 
 

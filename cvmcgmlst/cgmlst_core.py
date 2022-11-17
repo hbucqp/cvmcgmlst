@@ -37,7 +37,7 @@ class mlst():
                                       # task='dc-megablast',
                                       perc_identity=self.minid, max_target_seqs=1000000,
                                       num_threads=self.threads)
-        print(cline)
+        # print(cline)
         stdout, stderr = cline()
         df = pd.read_csv(self.temp_output, sep='\t', names=[
             'sseqid', 'slen', 'length', 'nident'])

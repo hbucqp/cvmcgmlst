@@ -67,13 +67,6 @@ class mlst():
                                 print(f'Found additional allele match, replace {gene}:{old_num} -> {num}')
                             else:
                                 print(f'Found additional allele match, but the allele number {num} is greater or equal to stored one {gene}:{old_num}, skip...')
-                                # next
-                                # num = old_num
-                                # result[gene] = num                         
-
-
-                            # result[gene] = str(
-                            #     result[gene]) + ', ' + str(num)
                         else:  # replace not perfect match
                             result[gene] = num
                     else:

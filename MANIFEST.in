@@ -1,2 +1,2 @@
 include requirements.txt
-recursive-include cvmcgmlst/db *
+recursive-include cvmcgmlst/db *.fsa

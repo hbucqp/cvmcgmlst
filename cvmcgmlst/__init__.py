@@ -3,7 +3,7 @@
 __title__ = 'cvmcgmlst'
 __description__ = 'cgMLST analysis'
 __url__ = 'https://github.com/hbucqp/cvmcgmlst'
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 __author__ = 'Qingpo Cui'
 __author_email__ = 'cqp@cau.edu.cn'
 __license__ = 'MIT'

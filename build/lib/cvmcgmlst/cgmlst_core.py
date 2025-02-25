@@ -37,7 +37,7 @@ class mlst():
                                       # task='dc-megablast',
                                       perc_identity=self.minid, max_target_seqs=1000000,
                                       num_threads=self.threads)
-        print(cline)
+        # print(cline)
         stdout, stderr = cline()
         df = pd.read_csv(self.temp_output, sep='\t', names=[
             'sseqid', 'slen', 'length', 'nident'])
@@ -48,6 +48,7 @@ class mlst():
             gene, num = re.match(
                 '^(\w+)[_-](\d+)', row['sseqid']).group(1, 2)
             # print(gene)
+            num = int(num)
             hlen = row['slen']
             alen = row['length']
             nident = row['nident']
@@ -57,10 +58,22 @@ class mlst():
                 # resolve the bug that could not get exactly matched allele
                 if hlen == alen & nident == hlen:  # exact match
                     if gene in result.keys():
-                        if not re.search(r'[~\?]', result[gene]):
-                            print('Found additional exact allele match')
-                            result[gene] = str(
-                                result[gene]) + ', ' + str(num)
+                        
+                        if not re.search(r'[~\?]', str(result[gene])):
+                            old_num = int(result[gene] )                          
+                            if num < old_num:
+                                # print(f'{num}\t{old_num}')
+                                result[gene] = num
+                                print(f'Found additional allele match, replace {gene}:{old_num} -> {num}')
+                            else:
+                                print(f'Found additional allele match, but the allele number {num} is greater or equal to stored one {gene}:{old_num}, skip...')
+                                # next
+                                # num = old_num
+                                # result[gene] = num                         
+
+
+                            # result[gene] = str(
+                            #     result[gene]) + ', ' + str(num)
                         else:  # replace not perfect match
                             result[gene] = num
                     else:

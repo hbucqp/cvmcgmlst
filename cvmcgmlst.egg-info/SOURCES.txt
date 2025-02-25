@@ -1,5 +1,6 @@
 .DS_Store
 README.md
+requirements.txt
 setup.py
 cvmcgmlst/.DS_Store
 cvmcgmlst/__init__.py

@@ -5,6 +5,7 @@ import os
 import re
 import sys
 import pandas as pd
+from cvmblaster.blaster import Blaster
 from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord

@@ -41,7 +41,7 @@ def args_parse():
     subparsers.add_parser('show_db', help="Show available databases")
     subparsers.add_parser('init', help='Initialize reference database')
     
-    create_parser = subparsers.add_parser('create_db')
+    create_parser = subparsers.add_parser('create_db', help='<add custome database, use cvmcgmlst createdb -h for help>')
     create_parser.add_argument('-file', required=True, help='Fasta format reference file')
     create_parser.add_argument('-name', required=True, help='Database name')
     create_parser.add_argument('-force', action="store_true", help='Force create database')
